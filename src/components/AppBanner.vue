@@ -12,11 +12,11 @@ export default {
           sub: "lorem ipsum",
         },
         {
-          image: "buy-comics-shop-locator.png",
+          image: "buy-comics-subscriptions.png",
           sub: "lorem ipsum",
         },
         {
-          image: "buy-comics-subscriptions.png",
+          image: "buy-comics-shop-locator.png",
           sub: "lorem ipsum",
         },
         {
@@ -61,7 +61,7 @@ export default {
     background-color: blue;
     color: white;
     height: 6rem;
-    padding: 1rem
+    padding: 1.5rem
 }
 
 ul {
@@ -75,17 +75,18 @@ ul {
 
   .item-link {
     @include flex();
+    a{
+        text-decoration: none;
+    }
     p {
         color: white;
         text-decoration: none;
         margin-left: 1rem
     };
-    a{
-        text-decoration: none;
-    }
+    
 
     img {
-      width: 2.5rem;
+      width: 2rem;
     }
 
   }
