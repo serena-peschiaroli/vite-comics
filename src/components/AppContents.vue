@@ -7,9 +7,25 @@ export default {
 </script>
 
 <template>
-    <h2> Contents</h2>
+    <div class="jumbotron">
+        <h2>
+            content goes here
+        </h2>
+
+    </div>
 
 </template>
 
-<style scoped>
+<style lang="scss">
+.jumbotron {
+    height: 6rem;
+    padding: 1rem;
+    color: white;
+    background-color: grey;
+    h2 {
+        vertical-align: center;
+    }
+}
+
+
 </style>
