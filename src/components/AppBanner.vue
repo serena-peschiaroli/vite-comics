@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getImagePath(image) {
-      // Assuming your images are in the public directory
+    
       return `src/assets/img/${image}`;
     },
   },
@@ -42,7 +42,7 @@ export default {
             <li v-for="(image, index) in shopOnline" :key="index">
                 <a href="">
                     <img :src="getImagePath(image.image)" :alt="image.alt">
-                    <p></p>
+                    <p> {{  shopOnline.sub }}</p>
 
                 </a>
             </li>
