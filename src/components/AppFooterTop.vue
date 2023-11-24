@@ -8,31 +8,34 @@ export default {
 
 <template>
 <div class="footer-top">
-    <div class="row">
-        <div class="col">
-            <h4> Lorem </h4>
-        </div>
-        <div class="col">
-            <h4> Lorem </h4>
-        </div>
-        <div class="col">
-            <h4> Lorem </h4>
-        </div>
-        <div class="larger-col">
-            <img src="../assets/img/dc-logo-bg.png" alt="">
-        </div>
-    </div>
+    <div class="container">
 
-    <div class="sub row">
-      <div class="col">
-        <h4> Lorem </h4>
-      </div>
-    </div>
+    
+        <div class="row">
+            <div class="col">
+                <h4> Lorem </h4>
+            </div>
+            <div class="col">
+                <h4> Lorem </h4>
+            </div>
+            <div class="col">
+                <h4> Lorem </h4>
+            </div>
+            <div class="larger-col">
+                <img src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
+        </div>
 
+        <div class="sub row">
+        <div class="col">
+            <h4> Lorem </h4>
+        </div>
+        </div>
+   </div>
 </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../style/partials/mixin" as *;
 .footer-top {
     background-image: url("../assets/img/footer-bg.jpg");
@@ -47,7 +50,7 @@ export default {
 }
 
 .row {
-    @include flex_bn;
+    @include flex();
     width: 100%;
     gap: 1rem;
 

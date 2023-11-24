@@ -51,28 +51,32 @@ export default {
 </script>
 
 <template>
+  
 <!-- striscia con imgs e link cliccabili -->
     <div class="banner">
-        <ul>
-          <!-- Itera elementi -->
-            <li v-for="(image, index) 
-            in shopOnline" :key="index">
-                <a class="item-link" :class="{active: image.isActive}" :href="''" @mouseover="setActive(index)">
-                   <!-- Immagine con percorso dinamico -->
-                    <img :src="getImagePath(image.image)" :alt="image.alt">
-                    <p> {{  image.sub }}</p>
+      <div class="container">
 
-                </a>
-            </li>
-        </ul>
-        
+      
+          <ul>
+            <!-- Itera elementi -->
+              <li v-for="(image, index) 
+              in shopOnline" :key="index">
+                  <a class="item-link" :class="{active: image.isActive}" :href="''" @mouseover="setActive(index)">
+                    <!-- Immagine con percorso dinamico -->
+                      <img :src="getImagePath(image.image)" :alt="image.alt">
+                      <p> {{  image.sub }}</p>
+
+                  </a>
+              </li>
+          </ul>
+      </div>  
     </div>
 
     
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* Utilizza uno stile mixin per le proprietà flexbox */
 @use "../style/partials/mixin" as *;
 
@@ -84,34 +88,28 @@ export default {
 }
 
 ul {
-  /* stile flex a lista */
   @include flex();
   list-style: none;
   gap: 1.5rem;
-  /* dmensione fissa ad elementi lista */
 
   li {
-    flex: 0 0 auto; 
-  }
-  /* flex a links */
+    flex: 0 0 auto;
 
-  .item-link {
-    @include flex();
-    a{
-        text-decoration: none;
-    }
-    /* Rimuove la sottolineatura dai collegamenti */
-    p {
+    .item-link {
+      @include flex();
+      text-decoration: none;
+
+      p {
         color: white;
         text-decoration: none;
-        margin-left: 1rem
-    };
-    
-  /* Imposta una larghezza fissa per le immagini */
-    img {
-      width: 2rem;
-    }
+        margin-left: 1rem;
+      }
 
+      img {
+        width: 2rem;
+      }
+    }
   }
 }
+
 </style>

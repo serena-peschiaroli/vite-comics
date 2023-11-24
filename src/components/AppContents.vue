@@ -16,7 +16,7 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .jumbotron {
     height: 6rem;
     padding: 1rem;
