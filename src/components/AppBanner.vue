@@ -71,12 +71,13 @@ export default {
 .banner {
     background-color: blue;
     color: white;
-    height: 6rem;
-    padding: 1.5rem
+    height: 8rem;
+    padding: 2rem
+    
 }
 
 ul {
-  @include flex();
+  @include flex(row, center, center, nowrap);
   list-style: none;
   gap: 1.5rem;
 

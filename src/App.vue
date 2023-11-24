@@ -12,7 +12,6 @@ export default {
     AppContents,
     AppBanner,
     AppFooterTop,
-    AppFooterBtm,
     
 }
 }

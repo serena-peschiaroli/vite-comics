@@ -149,12 +149,8 @@ section {
     justify-content: center;
     align-self: center;
     background-color: rgb(59, 104, 162);
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    width: 150px;
     text-align: center;
-   
+    width: 150px;
     margin: 0 auto;
     
 }

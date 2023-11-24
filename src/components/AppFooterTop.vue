@@ -1,7 +1,10 @@
 <script>
 export default {
     data() {
-        return{};
+        return{
+
+
+        };
     },
 };
 </script>
@@ -13,7 +16,8 @@ export default {
     
         <div class="row">
             <div class="col">
-                <h4> Lorem </h4>
+                <h3> DC COMICS </h3>
+
             </div>
             <div class="col">
                 <h4> Lorem </h4>
@@ -33,6 +37,15 @@ export default {
         </div>
    </div>
 </div>
+<div class="footer-bottom">
+    <div class="btn">
+        <a href="" class="btn">SIGN UP NOW</a>
+
+    </div>
+    <div class="nav-icons">
+
+    </div>
+</div>
 </template>
 
 <style lang="scss" scoped>
@@ -41,9 +54,8 @@ export default {
     background-image: url("../assets/img/footer-bg.jpg");
     background-size: cover;
     background-position: center;
-    height: 30em;
+    padding: 2rem;
     color: white;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -57,7 +69,7 @@ export default {
     .col {
         flex: 1 0 calc(13.333% - 1rem);
         margin-bottom: 1rem;
-        align-self: flex-start; 
+        align-self: stretch; 
 
         &:last-child {
             margin-bottom: 0;
@@ -75,6 +87,10 @@ export default {
             display: block;
         }
     }
+}
+
+.footer-bottom {
+    background-color: rgb(26, 25, 25);
 }
 
 </style>
