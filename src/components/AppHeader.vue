@@ -6,54 +6,38 @@ export default {
             navItems : [
                 {
                     title: "PERSONAGGI",
-                    isActive: false,
                 },
                 {
                     title: "COMICS",
-                    isActive: false,
                 },
                 {
                     title: "FILM",
-                    isActive: false,
                 },
                 {
                     title: "TV",
-                    isActive: false,
                 },
                 {
                     title: "GIOCHI",
-                    isActive: false,
                 },
                 {
                     title: "COLLEZIONABILI",
-                    isActive: false,
                 },
                 {
                     title: "VIDEO",
-                    isActive: false,
                 },
                 {
                     title: "FAN",
-                    isActive: false,
                 },
                 {
                     title: "NOTIZIE",
-                    isActive: false,
                 },
                 {
                     title: "NEGOZIO",
-                    isActive: false,
                 },
             ]
         };
     },
-    methods: {
-        setActive(item) {
-            this.navItems.forEach((navItem, index) => {
-                item.isActive = navItem === index;
-            });
-        }
-    }
+  
 };
 </script>
 
@@ -74,9 +58,9 @@ export default {
                     <ul>
                         <!-- Itera sugli elementi di navigazione -->
                         <li v-for="(item, index) in navItems" :key="item.title">
-                            <!-- Collegamento con classe "active" se l'elemento è attivo -->
+                            
                             <a href="#" class="nav-link">{{ item.title }}</a>
-                            <!-- <a :class="{active: item.isActive}" href="#" @mouseover="setActive(item)"> {{ item.title }}</a> -->
+                        
                         </li>
                     </ul>
                 </div>
@@ -131,52 +115,6 @@ header {
     }
   }
 }
-
-// header {
-//   .header-top {
-//     height: 3rem;
-//     background-color: black;
-//   }
-
-//   .nav {
-//     @include flex(row, space-between, center, nowrap);
-
-//     ul {
-//       @include flex(row, flex-end, center, nowrap);
-//       gap: 1rem;
-//       list-style: none;
-
-//       li {
-//         position: relative;
-
-//         a {
-//           text-decoration: none;
-//           position: relative;
-
-//           &:after {
-//             content: "";
-//             position: absolute;
-//             bottom: 0;
-//             left: 50%;
-//             transform: translateX(-50%);
-//             width: 0;
-//             height: 2px;
-//             background-color: blue;
-//             transition: width 0.3s ease;
-//           }
-
-//           &.active:after {
-//             width: 100%;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-
-
 
 
 </style>

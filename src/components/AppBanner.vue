@@ -7,27 +7,22 @@ export default {
         {
           image: "buy-comics-digital-comics.png",
           sub: "lorem ipsum",
-          isActive: false,
         },
         {
           image: "buy-comics-merchandise.png",
           sub: "lorem ipsum",
-          isActive: false,
         },
         {
           image: "buy-comics-subscriptions.png",
           sub: "lorem ipsum",
-          isActive: false,
         },
         {
           image: "buy-comics-shop-locator.png",
           sub: "lorem ipsum",
-          isActive: false,
         },
         {
           image: "buy-dc-power-visa.svg",
           sub: "lorem ipsum",
-          isActive: false,
         },
       ],
     };
@@ -38,14 +33,7 @@ export default {
     
       return `src/assets/img/${image}`;
     },
-    setActive(index) {
-      // iterare attraverso foreach
-      this.shopOnline.forEach((image, i) => {
-        //funzione di callback eseguita per ogni item;
-        //x ogni item isacrive = true se i combacia con index
-        image.isActive = i === index;
-      });
-    }
+    
   },
 };
 </script>
@@ -61,7 +49,7 @@ export default {
             <!-- Itera elementi -->
               <li v-for="(image, index) 
               in shopOnline" :key="index">
-                  <a class="item-link" :class="{active: image.isActive}" :href="''" @mouseover="setActive(index)">
+                  <a class="item-link"  :href="''">
                     <!-- Immagine con percorso dinamico -->
                       <img :src="getImagePath(image.image)" :alt="image.alt">
                       <p> {{  image.sub }}</p>
@@ -108,8 +96,15 @@ ul {
       img {
         width: 2rem;
       }
+
+      &:hover {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      border-bottom: 2px solid white; 
     }
+    
   }
+}
 }
 
 </style>
