@@ -92,15 +92,17 @@ export default {
 
     
         <div class="jumbotron">
-            <button> Series</button>
+            <a href="" class="btn btn-xl"> CURRENT SERIES</a>
             
             
 
         </div>
        <div class="container">
                 <div class="row">
-                    <CardComponents v-for="(item, index) in currentSeries" :key="index" :thumb="item.thumb"/>
+                    <CardComponents v-for="(item, index) in currentSeries" :key="index" :thumb="item.thumb" :series="item.series"/>
+
                 </div>
+                <a href="" class="btn btn-sm"> LOAD MORE </a>
         </div>
     </section>
 </template>
@@ -115,23 +117,54 @@ section {
     min-height: 300px;
     background-image: url("../assets/img/jumbotron.jpg");
     background-size: cover;
+    position: relative;
     
     
 }
 
+.container {
+    padding: 3rem 0;
+}
 .row {
     
+    
 
-    @include flex(row, center, stretch, wrap);
+    @include flex(row, center, center, wrap);
     gap: 1rem;
     padding: 1rem 0;
+    color: white;
 
     .col {
-        width: calc(100%/4);
+        width: calc(100%/5);
        
     }
 
+    
 
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: rgb(59, 104, 162);
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    width: 150px;
+    text-align: center;
+   
+    margin: 0 auto;
+    
+}
+
+.btn-xl {
+    padding: 1rem;
+    font-size: 18px;
+    position:absolute;
+    bottom: -1.8rem;
+    width: 250px;
 }
 
 
