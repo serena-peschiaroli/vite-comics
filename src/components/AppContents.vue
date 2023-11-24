@@ -1,5 +1,11 @@
 <script>
+import CardComponents from './cardComponents.vue';
 export default {
+    components: {
+        CardComponents,
+    },
+
+
     data () {
         return{
             currentSeries: [
@@ -34,43 +40,43 @@ export default {
                 "type": "comic book"
             },
             {
-                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/5/50/Batman_Beyond_v.1_1.jpg/revision/latest?cb=20080809201655",
+                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/5/50/Batman_Beyond_v.1_1.jpg",
                 "price": "$2.99",
                 "series": "Batman Beyond",
                 "type": "comic book"
             },
             {
-                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/0/0d/Batman_Superman_Vol_1_1.jpg/revision/latest/scale-to-width-down/1200?cb=20130627211607",
+                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/0/0d/Batman_Superman_Vol_1_1.jpg/",
                 "price": "$3.99",
                 "series": "Batman/Superman",
                 "type": "comic book"
             },
             {
-                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/c/cf/Batman_Superman_Annual_Vol_2_1.jpg/revision/latest?cb=20200929145132",
+                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/c/cf/Batman_Superman_Annual_Vol_2_1.jpg",
                 "price": "$4.99",
                 "series": "Batman/Superman Annual",
                 "type": "comic book"
             },
             {
-                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/5/54/Batman_The_Joker_War_Zone_Vol_1_1.jpg/revision/latest?cb=20200929124651",
+                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/5/54/Batman_The_Joker_War_Zone_Vol_1_1.jpg",
                 "price": "$5.99",
                 "series": "Batman: The Joker War Zone",
                 "type": "comic book"
             },
             {
-                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/6/64/Batman_Three_Jokers_Collected.jpg/revision/latest?cb=20201123054610",
+                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/6/64/Batman_Three_Jokers_Collected.jpg",
                 "price": "$6.99",
                 "series": "Batman: Three Jokers",
                 "type": "comic book"
             },
             {
-                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Batman_White_Knight_Presents_Harley_Quinn_Vol_1_1.jpg/revision/latest?cb=20201124094800",
+                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Batman_White_Knight_Presents_Harley_Quinn_Vol_1_1.jpg",
                 "price": "$4.99",
                 "series": "Batman: White Knight Presents: Harley Quinn",
                 "type": "comic book"
             },
             {
-                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg/revision/latest?cb=20160303223223",
+                "thumb": "https://static.wikia.nocookie.net/marvel_dc/images/c/c8/Catwoman_Vol_2_1.jpg",
                 "price": "$16.99",
                 "series": "Catwoman",
                 "type": "graphic novel"
@@ -86,32 +92,46 @@ export default {
 
     
         <div class="jumbotron">
-            <h2>
-                content goes here
-            </h2>
+            <button> Series</button>
+            
+            
 
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        
-                    </div>
+       <div class="container">
+                <div class="row">
+                    <CardComponents v-for="(item, index) in currentSeries" :key="index" :thumb="item.thumb"/>
                 </div>
-            </div>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixin" as *;
+
+section {
+    background-color: black;
+}
 .jumbotron {
-    height: 6rem;
-    padding: 1rem;
-    color: white;
-    background-color: grey;
-    h2 {
-        vertical-align: center;
+    min-height: 300px;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;
+    
+    
+}
+
+.row {
+    
+
+    @include flex(row, center, stretch, wrap);
+    gap: 1rem;
+    padding: 1rem 0;
+
+    .col {
+        width: calc(100%/4);
+       
     }
+
+
 }
 
 
