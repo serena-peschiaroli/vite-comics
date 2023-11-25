@@ -53,6 +53,14 @@ ul {
 a {
     text-decoration: none;
 
+    img {
+        &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        }
+    }
+    
+
 }
 .nav-icons {
         @include flex();
@@ -60,6 +68,10 @@ a {
         .social-icon{
             @include flex();
             gap: 1rem;
+            
+            
+            
+            
 
         }
         

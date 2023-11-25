@@ -179,6 +179,10 @@ export default {
 
     .login-btn {
         border: 2px solid blue;
+             &:hover {
+                background-color: rgb(97, 97, 117);
+                border: white;
+            }
     }
 
    
