@@ -20,10 +20,18 @@ export default {
         <ul>
             <li v-for="item in links" :key="item"> {{ item }} </li>
         </ul>
+
         <!-- Renderizzare icone social con immagini dinamiche -->
-        <img v-for="(socialIcon, index) in socialIcons" :key="index" :src="getImagePath(socialIcon.icon)" alt="socialIcon.name" class="social-icon" />
 
+        <div class="nav-icons">
 
+            
+                <a href="#" class="social-icon">
+
+            
+                    <img v-for="(socialIcon, index) in socialIcons" :key="index" :src="getImagePath(socialIcon.icon)" alt="socialIcon.name" />
+                </a>
+        </div>
    
 </template>
 
@@ -41,10 +49,22 @@ ul {
     }
 }
 
-.social-icon {
-    margin-right: 0.5rem;
-        
+
+a {
+    text-decoration: none;
+
 }
+.nav-icons {
+        @include flex();
+        gap: 1rem;
+        .social-icon{
+            @include flex();
+            gap: 1rem;
+
+        }
+        
+    
+    }
 
 
 </style>

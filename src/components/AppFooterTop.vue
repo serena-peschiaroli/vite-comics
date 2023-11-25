@@ -177,9 +177,8 @@ export default {
     background-color: rgb(26, 25, 25);
     padding: 2rem;
 
-    .nav-icons {
-        @include flex();
-        gap: 1rem;
+    .login-btn {
+        border: 2px solid blue;
     }
 
    
