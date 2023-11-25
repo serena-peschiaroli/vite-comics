@@ -1,5 +1,5 @@
 <script>
-import CardComponents from './cardComponents.vue';
+import CardComponents from './CardComponents.vue';
 export default {
     components: {
         CardComponents,
